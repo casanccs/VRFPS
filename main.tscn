@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4mtifbknjl1b"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hqows"]
+[ext_resource type="PackedScene" uid="uid://bxoo2n1e162h4" path="res://xr_origin_3d.tscn" id="2_0yoxf"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/interactable_area.gd" id="3_shxr1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5frnq"]
+albedo_color = Color(0, 0.0941176, 0.262745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_no5ks"]
+material = SubResource("StandardMaterial3D_5frnq")
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_skmjd"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6uqld"]
+size = Vector3(50, 1, 50)
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_hqows")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("2_0yoxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.63129, 0.0364916)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0969054, 0.995294, 0, -0.995294, -0.0969054, 0, 3.5258, -0.514498)
+light_energy = 3.0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_no5ks")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_skmjd")
+
+[node name="XRToolsInteractableArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+collision_layer = 4096
+collision_mask = 0
+script = ExtResource("3_shxr1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRToolsInteractableArea"]
+shape = SubResource("BoxShape3D_6uqld")
+
+[connection signal="pointer_event" from="XRToolsInteractableArea" to="." method="_on_xr_tools_interactable_area_pointer_event"]
