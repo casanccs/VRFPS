@@ -13,6 +13,17 @@ var walls = []
 
 var xr_interface: XRInterface
 func _ready():
+	# XR STUFF
+	xr_interface = XRServer.find_interface("OpenXR")
+	if xr_interface and xr_interface.is_initialized():
+		print("OpenXR initialized Successfully!")
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		
+		get_viewport().use_xr = true
+		#enable_passthrough()
+	else:
+		print("OpenXR not initialized, please check if your headset is connected")
+	# FILE STUFF
 	if not FileAccess.file_exists("user://savegame.save"):
 		var save_game = FileAccess.open("user://savegame.save", FileAccess.WRITE)
 		var json_string = JSON.stringify({
@@ -28,20 +39,32 @@ func _ready():
 			var parse_result = json.parse(save_game.get_line())
 			var node_data = json.get_data()
 			walls = node_data['walls']
+	load_walls()
 	
 	Messenger.WALL_HEIGHT.connect(change_wall)
 	Messenger.SAVE_WALLS.connect(save_walls)
 	Messenger.LOAD_WALLS.connect(load_walls)
+	Messenger.DELETE_WALL.connect(delete_wall)
+	Messenger.WORLD_HEIGHT.connect(world_height)
 	
-	xr_interface = XRServer.find_interface("OpenXR")
-	if xr_interface and xr_interface.is_initialized():
-		print("OpenXR initialized Successfully!")
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-		
-		get_viewport().use_xr = true
-		enable_passthrough()
-	else:
-		print("OpenXR not initialized, please check if your headset is connected")
+func world_height(offset):
+	$PlayerFloor.position.y = offset
+	
+	
+func delete_wall(cWall):
+	'''walls = [
+		{'sp': [1,3], 'ep': [4,6], 'height': 10}
+	]'''
+	for wall in walls:
+		start_pos = Vector3(wall.sp[0], 0, wall.sp[1])
+		end_pos = Vector3(wall.ep[0], 0, wall.ep[1])
+		#if cWall.position == (end_pos - start_pos)/2 + start_pos and cWall.rotation.y == atan((end_pos - start_pos).x/(end_pos - start_pos).z) and cWall.get_node("CollisionShape3D").shape.size.y == wall.height:
+		print(wall)
+		print((end_pos - start_pos)/2 + start_pos)
+		print(cWall.global_position)
+		if cWall.global_position == (end_pos - start_pos)/2 + start_pos + Vector3(0,wall.height/2,0):
+			walls.erase(wall)
+			break
 
 func load_walls():
 	'''walls = [
@@ -51,7 +74,7 @@ func load_walls():
 		start_pos = Vector3(wall.sp[0], 0, wall.sp[1])
 		end_pos = Vector3(wall.ep[0], 0, wall.ep[1])
 		wallClone = wall_scene.instantiate() # create a wall
-		add_child(wallClone) # add to the main scene
+		$Walls.add_child(wallClone) # add to the main scene
 		wallClone.visible = true
 		wallClone.get_node("MeshInstance3D").mesh.size.z = (end_pos - start_pos).length()
 		wallClone.get_node("CollisionShape3D").shape.size.z = (end_pos - start_pos).length()
@@ -80,7 +103,7 @@ func _on_xr_tools_interactable_area_pointer_event(event):
 	if wall_height != 0:
 		if event.event_type == 2: # if you pull the trigger onto the floor
 			wallClone = wall_scene.instantiate() # create a wall
-			add_child(wallClone) # add to the main scene
+			$Walls.add_child(wallClone) # add to the main scene
 			placing = true
 			wallClone.visible = true
 			wallClone.get_node("MeshInstance3D").mesh.size.y = 0.05

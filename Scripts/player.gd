@@ -2,10 +2,10 @@ extends XROrigin3D
 
 var cWall
 
-
 func _on_right_hand_button_pressed(name):
 	if cWall and name == "trigger_click":
 		cWall.queue_free()
+		Messenger.DELETE_WALL.emit(cWall)
 	if name == "by_button":
 		Messenger.SAVE_WALLS.emit()
 	if name == "ax_button":

@@ -1,2 +1,7 @@
 1. Height level: Must fix using the Physical Boundary with the Quest
 3. The origin point is not always in the center for some reason: Use the Left Stick and Right Stick when doing level setup
+
+
+In delete_wall branch:
+	1. Added delete_wall and world_height
+	2. Also added $Walls node where all added walls go into

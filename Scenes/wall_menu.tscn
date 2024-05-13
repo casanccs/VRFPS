@@ -23,20 +23,39 @@ color = Color(0.190762, 0.190762, 0.190762, 1)
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 18.0
-offset_top = 268.0
+offset_top = 80.0
 offset_right = 726.0
-offset_bottom = 356.0
+offset_bottom = 168.0
 theme_override_font_sizes/font_size = 50
 text = "Wall Height (In Meters):"
 
 [node name="SpinBox" type="SpinBox" parent="."]
 layout_mode = 0
 offset_left = 622.0
-offset_top = 210.0
+offset_top = 30.0
 offset_right = 705.063
-offset_bottom = 241.0
+offset_bottom = 61.0
 scale = Vector2(6, 6)
 max_value = 5.0
 step = 0.2
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 480.0
+offset_right = 726.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 50
+text = "World Height Offset:"
+
+[node name="SpinBox2" type="SpinBox" parent="."]
+offset_left = 622.0
+offset_top = 425.0
+offset_right = 705.063
+offset_bottom = 456.0
+scale = Vector2(6, 6)
+min_value = -1.0
+max_value = 1.0
+step = 0.05
+
 [connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="value_changed" from="SpinBox2" to="." method="_on_spin_box_2_value_changed"]

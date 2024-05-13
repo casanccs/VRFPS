@@ -83,11 +83,12 @@ shape = SubResource("BoxShape3D_m8ey8")
 
 [node name="MovementTurn" parent="RightHand" instance=ExtResource("8_du8eg")]
 turn_mode = 2
+smooth_turn_speed = 0.5
 
 [node name="PlayerBody" parent="." instance=ExtResource("4_uqhw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000230789, 0.000463247, 9.74685e-05)
 collision_layer = 524292
-collision_mask = 2
+collision_mask = 16
 physics = SubResource("Resource_0td0i")
 
 [connection signal="button_pressed" from="LeftHand" to="." method="_on_left_hand_button_pressed"]
