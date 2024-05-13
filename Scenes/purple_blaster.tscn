@@ -162,10 +162,11 @@ grow = true
 grow_amount = 0.01
 
 [node name="Purple_Blaster" instance=ExtResource("1_uk2e6")]
-collision_mask = 196608
+collision_layer = 8
+collision_mask = 201730
 script = ExtResource("2_s0amd")
 bullet_scene = ExtResource("3_s1lv8")
-bullet_speed = 10.0
+bullet_speed = 15.0
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_xjoel")

@@ -22,6 +22,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
+        android:name="com.oculus.feature.PASSTHROUGH"
+        android:required="false" />
+    <uses-feature
         android:name="android.hardware.vr.headtracking"
         android:required="true"
         android:version="1" />

@@ -6,9 +6,9 @@ INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\
 manifest
 ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:2:1-54:12
 MERGED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-48:12
+INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:2:1-48:12
 MERGED from [godot-lib.template_debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\1d2f4d75c034fbcf1699ed1528521307\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:2:1-35:12
 MERGED from [godotopenxrmeta-debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\8446baab8a2d772242734cd98de8c7fc\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.fragment:fragment:1.6.2] C:\Users\zirol\.gradle\caches\transforms-3\a1052a08c437a0cfe93531a0770d912d\transformed\fragment-1.6.2\AndroidManifest.xml:17:1-22:12
@@ -72,7 +72,7 @@ application
 ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:18:5-52:19
 MERGED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:18:5-52:19
 MERGED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:18:5-52:19
-INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:12:5-45:19
+INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:14:5-47:19
 MERGED from [godot-lib.template_debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\1d2f4d75c034fbcf1699ed1528521307\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:9:5-33:19
 MERGED from [godot-lib.template_debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\1d2f4d75c034fbcf1699ed1528521307\transformed\jetified-godot-lib.template_debug\AndroidManifest.xml:9:5-33:19
 MERGED from [godotopenxrmeta-debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\8446baab8a2d772242734cd98de8c7fc\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:12:5-22:19
@@ -105,7 +105,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\zirol\.gradle\cach
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:20:9-36
 		REJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:20:9-36
 	tools:replace
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:19:9-143
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:21:9-143
 	android:isGame
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:23:9-30
 		REJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:23:9-30
@@ -118,7 +118,7 @@ MERGED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\An
 MERGED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:33:9-50:20
 REJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:45:13-49:29
 	tools:node
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:154-186
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:26:154-186
 	android:screenOrientation
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:40:13-50
 		REJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:40:13-50
@@ -147,7 +147,7 @@ REJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:36:13-55
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:36:13-55
 	tools:replace
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:58-153
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:26:58-153
 	android:name
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\AndroidManifest.xml:34:13-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER
@@ -168,25 +168,33 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:11:22-64
+uses-feature#com.oculus.feature.PASSTHROUGH
+ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:12:5-113
+	tools:node
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:12:19-39
+	android:required
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:12:86-110
+	android:name
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:12:40-85
 meta-data#com.oculus.supportedDevices
-ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:22:9-125
+ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:9-125
 REJECTED from [godotopenxrmeta-debug.aar] C:\Users\zirol\.gradle\caches\transforms-3\8446baab8a2d772242734cd98de8c7fc\transformed\jetified-godotopenxrmeta-debug\AndroidManifest.xml:16:9-18:54
 	tools:node
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:22:20-40
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:20-40
 	android:value
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:22:84-122
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:84-122
 	android:name
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:22:41-83
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:24:41-83
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:com.oculus.intent.category.VR+category:name:org.khronos.openxr.intent.category.IMMERSIVE_HMD
-ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:31:5-42:21
+ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:33:5-44:21
 category#com.oculus.intent.category.VR
-ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:37:6-63
+ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:39:6-63
 	android:name
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:37:16-60
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:39:16-60
 category#org.khronos.openxr.intent.category.IMMERSIVE_HMD
-ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:41:6-82
+ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:43:6-82
 	android:name
-		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:41:16-79
+		ADDED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml:43:16-79
 uses-sdk
 INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Portfolio\VR Games\VR-Online-Multiplayer-in-Room\android\build\src\debug\AndroidManifest.xml

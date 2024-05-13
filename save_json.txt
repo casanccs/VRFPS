@@ -1,0 +1,7 @@
+{
+	'walls': [], 
+	'high_score': 0,
+	'gun_spawns': []
+}
+
+walls = [{'sp': , 'ep': , 'height'}]

@@ -33,9 +33,15 @@ a={
 
 [layer_names]
 
+3d_physics/layer_1="menu"
+3d_physics/layer_2="floor"
+3d_physics/layer_3="player"
+3d_physics/layer_4="gun"
 3d_physics/layer_11="Walls"
 3d_physics/layer_12="Hands"
 3d_physics/layer_13="Drawing Layer"
+3d_physics/layer_14="target"
+3d_physics/layer_15="bullet"
 
 [rendering]
 

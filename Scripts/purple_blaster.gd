@@ -2,7 +2,7 @@ extends XRToolsPickable
 
 @export var bullet_scene: PackedScene
 
-@export var bullet_speed = 10.0
+@export var bullet_speed = 15.0
 
 var can_fire = true
 

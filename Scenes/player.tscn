@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bxoo2n1e162h4"]
+[gd_scene load_steps=12 format=3 uid="uid://bxoo2n1e162h4"]
 
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="1_gh1b7"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_jer4m"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="4_uqhw3"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_yd4g1"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="5_7b0kk"]
+[ext_resource type="PackedScene" uid="uid://c2ihhvt1bny7n" path="res://Scenes/wall_menu_v.tscn" id="6_jcfxa"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="7_xf0lu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8ey8"]
@@ -35,6 +36,8 @@ tracker = &"left_hand"
 
 [node name="FunctionPickup" parent="LeftHand" instance=ExtResource("5_7b0kk")]
 grab_distance = 1.0
+grab_collision_mask = 327688
+ranged_collision_mask = 8
 
 [node name="FunctionPointer" parent="LeftHand" instance=ExtResource("4_yd4g1")]
 show_laser = 2
@@ -59,8 +62,13 @@ shape = SubResource("BoxShape3D_m8ey8")
 [node name="RightHand" type="XRController3D" parent="."]
 tracker = &"right_hand"
 
+[node name="wall_menu_v" parent="RightHand" instance=ExtResource("6_jcfxa")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -8.74228e-08, 1, 8.74228e-08, -1, -8.74228e-08, 4.37114e-08, 0.1, 0, 0)
+
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("5_7b0kk")]
 grab_distance = 1.0
+grab_collision_mask = 327688
+ranged_collision_mask = 8
 
 [node name="RightHand" parent="RightHand" instance=ExtResource("2_xl5dg")]
 
@@ -74,8 +82,11 @@ shape = SubResource("BoxShape3D_m8ey8")
 
 [node name="PlayerBody" parent="." instance=ExtResource("4_uqhw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000230789, 0.000463247, 9.74685e-05)
+collision_layer = 524292
+collision_mask = 2
 physics = SubResource("Resource_0td0i")
 
+[connection signal="button_pressed" from="LeftHand" to="." method="_on_left_hand_button_pressed"]
 [connection signal="button_pressed" from="RightHand" to="." method="_on_right_hand_button_pressed"]
 [connection signal="area_entered" from="RightHand/RightArea" to="." method="_on_area_3d_2_area_entered"]
 [connection signal="area_exited" from="RightHand/RightArea" to="." method="_on_area_3d_2_area_exited"]
