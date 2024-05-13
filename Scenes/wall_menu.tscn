@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmlx4raa016jw"]
 
-[ext_resource type="Script" path="res://Scenes/wall_menu.gd" id="1_0owx5"]
+[ext_resource type="Script" path="res://Scripts/wall_menu.gd" id="1_0owx5"]
 
 [node name="wall_menu" type="Control"]
 layout_mode = 3
@@ -36,9 +36,7 @@ offset_top = 210.0
 offset_right = 705.063
 offset_bottom = 241.0
 scale = Vector2(6, 6)
-min_value = 0.5
 max_value = 5.0
 step = 0.2
-value = 1.1
 
 [connection signal="value_changed" from="SpinBox" to="." method="_on_spin_box_value_changed"]

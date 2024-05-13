@@ -2,7 +2,8 @@ extends Node3D
 
 @export var wall_scene: PackedScene
 
-var wall_height = 1
+var wall_height = 0
+var wall_init = false
 var start_pos
 var end_pos
 var placing = false
@@ -72,30 +73,32 @@ func save_walls(): # this also will start the game
 
 func change_wall(height):
 	wall_height = height
+	wall_init = true
 
 func _on_xr_tools_interactable_area_pointer_event(event):
 	#https://github.com/GodotVR/godot-xr-tools/blob/master/addons/godot-xr-tools/events/pointer_event.gd
-	if event.event_type == 2: # if you pull the trigger onto the floor
-		wallClone = wall_scene.instantiate() # create a wall
-		add_child(wallClone) # add to the main scene
-		placing = true
-		wallClone.visible = true
-		wallClone.get_node("MeshInstance3D").mesh.size.y = 0.05
-		start_pos = event.position
-	if event.event_type == 3: # if you let go of the trigger
-		placing = false
-		wallClone.get_node("MeshInstance3D").mesh.size.y = wall_height
-		wallClone.get_node("CollisionShape3D").shape.size.y = wall_height
-		wallClone.position.y = wall_height/2
-		walls.append({'sp': [start_pos.x, start_pos.z], 'ep': [end_pos.x, end_pos.z], 'height': wall_height})
-	if event.event_type == 4: # while you drag and place the wall
-		if placing:
-			end_pos = event.position
-			wallClone.get_node("MeshInstance3D").mesh.size.z = (end_pos - start_pos).length()
-			wallClone.get_node("CollisionShape3D").shape.size.z = (end_pos - start_pos).length()
-			wallClone.position = (end_pos - start_pos)/2 + start_pos
-			wallClone.position.y = 0.025
-			wallClone.rotation.y = atan((end_pos - start_pos).x/(end_pos - start_pos).z)
+	if wall_height != 0:
+		if event.event_type == 2: # if you pull the trigger onto the floor
+			wallClone = wall_scene.instantiate() # create a wall
+			add_child(wallClone) # add to the main scene
+			placing = true
+			wallClone.visible = true
+			wallClone.get_node("MeshInstance3D").mesh.size.y = 0.05
+			start_pos = event.position
+		if event.event_type == 3: # if you let go of the trigger
+			placing = false
+			wallClone.get_node("MeshInstance3D").mesh.size.y = wall_height
+			wallClone.get_node("CollisionShape3D").shape.size.y = wall_height
+			wallClone.position.y = wall_height/2
+			walls.append({'sp': [start_pos.x, start_pos.z], 'ep': [end_pos.x, end_pos.z], 'height': wall_height})
+		if event.event_type == 4: # while you drag and place the wall
+			if placing:
+				end_pos = event.position
+				wallClone.get_node("MeshInstance3D").mesh.size.z = (end_pos - start_pos).length()
+				wallClone.get_node("CollisionShape3D").shape.size.z = (end_pos - start_pos).length()
+				wallClone.position = (end_pos - start_pos)/2 + start_pos
+				wallClone.position.y = 0.025
+				wallClone.rotation.y = atan((end_pos - start_pos).x/(end_pos - start_pos).z)
 
 
 func enable_passthrough() -> bool:

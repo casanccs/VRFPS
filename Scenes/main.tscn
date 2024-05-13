@@ -53,7 +53,7 @@ script = ExtResource("4_ipu1q")
 shape = SubResource("BoxShape3D_6uqld")
 
 [node name="Target" parent="." instance=ExtResource("5_htxkw")]
-transform = Transform3D(-0.0466706, 0.99891, 0, -0.99891, -0.0466706, 0, 0, 0, 1, -1.63913e-07, 1.60871, -1.73046)
+transform = Transform3D(-0.0466706, 0.99891, 0, -0.99891, -0.0466706, 0, 0, 0, 1, 0, 1.609, 0)
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.810614, 0.58558, 0, -0.58558, 0.810614, 0, 3.06566, 2.21326)

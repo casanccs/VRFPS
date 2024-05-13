@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxoo2n1e162h4"]
+[gd_scene load_steps=13 format=3 uid="uid://bxoo2n1e162h4"]
 
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="1_gh1b7"]
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_jer4m"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="5_7b0kk"]
 [ext_resource type="PackedScene" uid="uid://c2ihhvt1bny7n" path="res://Scenes/wall_menu_v.tscn" id="6_jcfxa"]
 [ext_resource type="Script" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="7_xf0lu"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="8_du8eg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8ey8"]
 size = Vector3(0.05, 0.12, 0.16)
@@ -63,7 +64,7 @@ shape = SubResource("BoxShape3D_m8ey8")
 tracker = &"right_hand"
 
 [node name="wall_menu_v" parent="RightHand" instance=ExtResource("6_jcfxa")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -8.74228e-08, 1, 8.74228e-08, -1, -8.74228e-08, 4.37114e-08, 0.1, 0, 0)
+transform = Transform3D(1.19249e-08, 8.74228e-08, 1, 0, -1, 8.74228e-08, 1, -1.04251e-15, -1.19249e-08, 0.1, 0, 0)
 
 [node name="FunctionPickup" parent="RightHand" instance=ExtResource("5_7b0kk")]
 grab_distance = 1.0
@@ -79,6 +80,9 @@ collision_mask = 1024
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RightHand/RightArea"]
 shape = SubResource("BoxShape3D_m8ey8")
+
+[node name="MovementTurn" parent="RightHand" instance=ExtResource("8_du8eg")]
+turn_mode = 2
 
 [node name="PlayerBody" parent="." instance=ExtResource("4_uqhw3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000230789, 0.000463247, 9.74685e-05)
